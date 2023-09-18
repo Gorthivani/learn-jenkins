@@ -102,3 +102,11 @@ pipeline {
 //         }
 //     }
 // }
+node('workstation')
+{
+     def x:integer =10
+     env.y=20
+     stage ('test'){
+      print x
+      sh 'echo y-$(y)'}
+      }
