@@ -102,11 +102,16 @@ pipeline {
 //         }
 //     }
 // }
-node('workstation')
-{
+
      def x:integer =10
      env.y=20
+     def samplef(){
+     print "xyz Function"}
+ node('workstation')
+     {
      stage ('test'){
       print x
-      sh 'echo y-$(y)'}
+      sh 'echo y-$(y)'
+      samplef()
+      }
       }
